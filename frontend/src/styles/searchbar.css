@@ -1,0 +1,51 @@
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: auto auto;          /* no horizontal auto margin for left align */
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-input {
+  flex: 1;                   /* better than flex-grow for full control */
+  border: none;
+  padding: 0.75rem 1.2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  outline: none;
+  height: 40px;             /* fix height */
+  box-sizing: border-box;
+  margin: 0;                /* ensure no margin */
+}
+
+.search-input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.search-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 0 1.5rem;        /* increased padding for better appearance */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0 6px 6px 0;
+  outline: none;
+  height: 40px;             /* same height as input */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;           /* prevent button from shrinking */
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
