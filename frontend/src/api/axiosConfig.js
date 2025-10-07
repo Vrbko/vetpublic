@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-  const instance = axios.create({
-    baseURL: "https://veterinar-backend.onrender.com/", // Docker service name
-  });
+const instance = axios.create({
+  baseURL: process.env.API_URL || "http://localhost:3000",
+});
 
 
 instance.interceptors.request.use(config => {

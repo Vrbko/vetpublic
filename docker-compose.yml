@@ -36,7 +36,7 @@ services:
     build: ./frontend
     restart: always
     ports:
-      - "3001:3001"   # change if your frontend uses a different port
+      - "80:3001"   # change if your frontend uses a different port
     environment:
       - PORT=3001
     depends_on:

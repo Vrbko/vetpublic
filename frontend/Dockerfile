@@ -1,6 +1,6 @@
 
 # Use the latest LTS version of Node.js
-FROM node:18-alpine
+FROM node:22-alpine
  
 # Set the working directory inside the container
 WORKDIR /app
@@ -9,7 +9,8 @@ WORKDIR /app
 COPY package*.json ./
  
 # Install dependencies
-RUN npm ci --omit=dev 
+RUN npm ci --only=production
+ 
 # Copy the rest of your application files
 COPY . .
  
